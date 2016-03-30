@@ -1,0 +1,31 @@
+<!--
+  系统设置模板
+-->
+
+
+<ion-view view-title="系统设置" class="has-headers has-footer" hide-back-button="true">
+  <ion-content class="padding">
+
+
+    <div class="list">
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">系统地址</span>
+        <input type="text" placeholder="http://127.0.0.1/" ng-model="sysSetting.systemAddress">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">项目编号</span>
+        <input type="text" placeholder="000000001" ng-model="sysSetting.systemId">
+      </label>
+      <label class="item item-input item-stacked-label">
+        <span class="input-label">ERP待办每页显示条目</span>
+        <input type="number" value="10" ng-model="sysSetting.erpListNumber">
+      </label>
+    </div>
+
+    <div class="loginButton">
+      <button class="button ion-person button-block button-balanced" ng-click="saveSettings(sysSetting)"> 保存设置</button>
+    </div>
+
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,40 @@
+
+<!--
+  登录页面模板
+-->
+
+
+<!-- -->
+<ion-view view-title="登录" class="loginBg" hide-nav-bar="true">
+  <!-- <ion-nav-title><img src="img/logo.png" width="40"></ion-nav-title> -->
+
+  <ion-content class="padding">
+
+    <div class="row responsive-sm padding remvoeBP">
+      <div class="col">
+        <!-- 登陆头logo-->
+        <div class="app-logo"><img class="portal-logo" src="img/logo.svg"></div>
+
+        <!-- 登陆表单-->
+        <div class="list list-inset removePM">
+          <label class="item item-input"><input type="text" ng-model="user.username" placeholder="请输入账号">
+          </label>
+          <label class="item item-input"><input type="password" ng-model="user.password" placeholder="请输入密码">
+          </label>
+        </div>
+
+        <!-- 登录按钮-->
+        <div class="loginButton">
+          <button class="button ion-unlocked button-block button-balanced" ng-click="login(user);">登录</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="row  padding removePM">
+      <!-- 此块区域可设置其他按钮-->
+
+    </div>
+
+  </ion-content>
+</ion-view>

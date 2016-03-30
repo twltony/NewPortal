@@ -1,0 +1,103 @@
+.pt-color-s{
+  background-color: rgb(129,122,137);
+}
+
+.pt-color-h{
+  background-color: rgb(243,160,161);
+}
+
+.pt-color-b{
+  background-color: rgb(105,132,156);
+}
+
+
+.loginBg {
+  background: rgba(73, 155, 234, 1);
+  background: -moz-linear-gradient(left, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 45%, rgba(73, 155, 234, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73, 155, 234, 1)), color-stop(45%, rgba(32, 124, 229, 1)), color-stop(100%, rgba(73, 155, 234, 1)));
+  background: -webkit-linear-gradient(left, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 45%, rgba(73, 155, 234, 1) 100%);
+  background: -o-linear-gradient(left, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 45%, rgba(73, 155, 234, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 45%, rgba(73, 155, 234, 1) 100%);
+  background: linear-gradient(to right, rgba(73, 155, 234, 1) 0%, rgba(32, 124, 229, 1) 45%, rgba(73, 155, 234, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#499bea', endColorstr='#499bea', GradientType=1);
+  background-image: url("../img/loginBack.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.app-logo {
+  max-width: 300px;
+  margin: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portal-logo{
+  max-width: 300px;
+}
+
+.top-content {
+  padding-top: 10vh;
+  text-align: center;
+}
+
+.loginButton {
+  padding-bottom: 0px;
+}
+
+.remvoeBP {
+  padding-bottom: 0px;
+}
+
+.removePM {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#menuLinks .list .item {
+  border-color: #479CF7;
+}
+
+#menuLinks .list .item a {
+  background: #387EF5;
+  color: #fff;
+}
+
+.pt-main-logo{
+  max-height: 300px;
+  background-image: url("../img/banner.png");
+  background-position: center center;
+  background-size: cover;
+  height: 30vw;
+  display: inline-block;
+}
+
+.pt-main-buttons{
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+.pt-main-buttons-left{
+  margin-left: auto;
+}
+.pt-main-buttons-right{
+  margin-right: auto;
+}
+
+.pt-main-icon{
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.pt-main-text{
+  font-size: 1rem;
+  color:white;
+  font-weight: bolder;
+  text-align: right;
+}
