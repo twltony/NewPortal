@@ -129,6 +129,10 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
             })
             .state('tab.dash', {
                 url: '/dash',
+                nativeTransitionsIOS: {
+                  "type": "flip",
+                  "direction": "left"
+                },
                 views: {
                     'tab-dash': {
                         templateUrl: 'templates/Tabs/tab-dash.html',
@@ -141,7 +145,7 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
                 url: '/chats',
                 views: {
                     'tab-chats': {
-                        templateUrl: 'templates/Tabs/tab-chats.html',
+                        templateUrl: 'templates/Tabs/tab-chats.html'
                         //controller: 'ChatsCtrl'
                     }
                 }
@@ -169,4 +173,15 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
 
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/logintab/login');
-    });
+    })
+
+/**
+ * Views 配置
+ */
+  //.config(function($ionicConfigProvider) {
+  //  $ionicConfigProvider.views.transition('ios');
+  //
+  //  // note that you can also chain configs
+  //  //$ionicConfigProvider.backButton.text('Go Back').icon('ion-chevron-left');
+  //})
+;
