@@ -4,7 +4,7 @@
  */
 angular.module('ctrl-dash', [])
 
-.controller('DashCtrl',['$scope',function($scope){
+.controller('DashCtrl',['$scope','$state',function($scope,$state){
 
   $scope.showDash = function(subModalIndex){
     $scope.isOne = false;
@@ -15,6 +15,8 @@ angular.module('ctrl-dash', [])
       $scope.isOne = true;
       $scope.isSecond = false;
       $scope.isThird = false;
+      //跳转到待办页
+      $state.go('tab.dash.items',{pageId:'1'});
        //console.log(1);
     }else if(subModalIndex==2){
     //已处理
@@ -22,14 +24,25 @@ angular.module('ctrl-dash', [])
       $scope.isSecond = true;
       $scope.isThird = false;
     //console.log(2);
+      $state.go('tab.dash.items',{pageId:'2'});
     }else{
       //已处理
       $scope.isOne = false;
       $scope.isSecond = false;
       $scope.isThird = true;
     //console.log(3);
+      $state.go('tab.dash.items',{pageId:'3'});
     }
     $scope.tab = subModalIndex;
   };
     $scope.showDash(1);
+
+    $scope.nameText = "";
 }])
+
+.controller('DashItemCtrl',['$scope','$stateParams',function($scope,$stateParams){
+    //console.log($stateParams.pageId);
+    //console.log($scope.nameText);
+    $scope.nameText = $stateParams.pageId;
+
+  }])

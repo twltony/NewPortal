@@ -134,15 +134,14 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
                 views: {
                     'tab-dash': {
                         templateUrl: 'templates/Tabs/tab-dash.html',
-                        controller: 'DashCtrl',
-                        views:{
-                          'tab-dash-items':{
-                            templateUrl: 'templates/Tabs/tab-dash/tab-dash-items.html'
-                            //controller: 'DashCtrl'
-                          }
-                        }
+                        controller: 'DashCtrl'
                     }
                 }
+            })
+           .state('tab.dash.items', {
+                url: '/dash-items/:pageId',
+                templateUrl: 'templates/Tabs/tab-dash-items.html',
+                controller: 'DashItemCtrl'
             })
             //.state('tab.dash.todo', {
             //  url: '/todo',
@@ -184,6 +183,7 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
 
         // if none of the above states are matched, use this as the fallback
         $urlRouterProvider.otherwise('/logintab/login');
+        //$urlRouterProvider.otherwise('/tab/dash');
     })
 
 /**
