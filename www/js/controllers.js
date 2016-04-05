@@ -8,7 +8,8 @@ angular.module('app.controllers', [
   'ctrl-leftslidermenu',
   'ctrl-mainmenu',
   'ctrl-systemsettings',
-  'ctrl-leftslidermenu'
+  'ctrl-leftslidermenu',
+  'ctrl-dash'
 ])
 
 
@@ -32,8 +33,8 @@ angular.module('app.controllers', [
 //tabs
 //-----------------
 
-  .controller('DashCtrl', function ($scope) {
-  })
+  //.controller('DashCtrl', function ($scope) {
+  //})
 
   .controller('ChatsCtrl', function ($scope, Chats) {
     // With the new view caching in Ionic, Controllers are only called

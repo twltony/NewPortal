@@ -13,7 +13,6 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
             if (window.cordova && window.cordova.plugins.Keyboard) {
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
                 cordova.plugins.Keyboard.disableScroll(true);
-
             }
             if (window.StatusBar) {
                 // org.apache.cordova.statusbar required
@@ -120,7 +119,6 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
                 }
             })
 
-            //-------
             //审批页router
             .state('tab', {
                 url: '/tab',
@@ -136,10 +134,23 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
                 views: {
                     'tab-dash': {
                         templateUrl: 'templates/Tabs/tab-dash.html',
-                        controller: 'DashCtrl'
+                        controller: 'DashCtrl',
+                        views:{
+                          'tab-dash-items':{
+                            templateUrl: 'templates/Tabs/tab-dash/tab-dash-items.html'
+                            //controller: 'DashCtrl'
+                          }
+                        }
                     }
                 }
             })
+            //.state('tab.dash.todo', {
+            //  url: '/todo',
+            //  nativeTransitionsIOS: {
+            //    "type": "flip",
+            //    "direction": "left"
+            //  }
+            //})
 
             .state('tab.chats', {
                 url: '/chats',

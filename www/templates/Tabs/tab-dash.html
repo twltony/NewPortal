@@ -1,9 +1,38 @@
-<ion-view view-title="Dashboard">
+<ion-view view-title="我的待办">
   <ion-header-bar align-title="center" class="bar-positive">
     <h1 class="title">我的待办</h1>
   </ion-header-bar>
-
+  <div class="bar bar-subheader">
+    <div class="button-bar">
+      <a class="button" ng-click="showDash(1)" ng-class="{'active':isOne}">待办</a>
+      <a class="button" ng-click="showDash(2)" ng-class="{'active':isSecond}">已办</a>
+      <a class="button" ng-click="showDash(3)" ng-class="{'active':isThird}">消息</a>
+    </div>
+  </div>
   <ion-content class="padding has-header">
+    <div class="content has-subheader">
 
+      <div ng-if="tab==1" href="#/tab/dash"> <ion-nav-view name="tab-dash-items" ></ion-nav-view></div>
+      <div ng-if="tab==2" href="#/tab/dash"> <ion-nav-view name="tab-dash-items" ></ion-nav-view></div>
+      <div ng-if="tab==3" href="#/tab/dash"> <ion-nav-view name="tab-dash-items" ></ion-nav-view></div>
+
+      <!--&lt;!&ndash; 第一子页面&ndash;&gt;-->
+      <!--<script type="text/ng-template" id="1.html">-->
+        <!--<p>This is the content of the template.</p><p>This is the content of the template.D待办</p>-->
+      <!--</script>-->
+      <!--&lt;!&ndash; 第二子页面&ndash;&gt;-->
+      <!--<script type="text/ng-template" id="2.html">-->
+        <!--<p>This is the content of the template.</p><p>This is the content of the template.未办</p>-->
+      <!--</script>-->
+      <!--&lt;!&ndash; 第三子页面&ndash;&gt;-->
+      <!--<script type="text/ng-template" id="3.html">-->
+        <!--<div class=" list list-inset">-->
+          <!--<ion-item>用户名</ion-item>-->
+          <!--<ion-item>手机号</ion-item>-->
+          <!--<ion-item>密码</ion-item>-->
+        <!--</div>-->
+
+      <!--</script>-->
+    </div>
   </ion-content>
 </ion-view>
