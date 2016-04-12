@@ -1,44 +1,14 @@
 <div class="list">
 
-  <a class="item item-avatar pt-itemlist" href="#">
+  <a class="item item-avatar pt-itemlist" ng-repeat="billItem in billItems"
+     href="#/tab/dash-items-detials/{{billItem.id}}">
     <img src="img\ionic.png">
-    <h2>张三提交单据审批</h2>
+    <h2 ng-bind="billItem.title"></h2>
     <div class="row">
-      <div class="col col-50">财务审批</div>
-      <div class="col">.col</div>
-      <div class="col">.col</div>
+      <div class="col col-33" ng-bind="billItem.system"></div>
+      <div class="col col-33"></div>
+      <div class="col col-33" ng-bind="billItem.date"></div>
     </div>
   </a>
-   <a class="item item-avatar" href="#">
-    <img src="venkman.jpg">
-    <h2>Venkman</h2>
-    <p>Back off, man. I'm a scientist.</p>
-  </a>
-   <a class="item item-avatar" href="#">
-    <img src="venkman.jpg">
-    <h2>Venkman</h2>
-    <p>Back off, man. I'm a scientist.</p>
-  </a>
-   <a class="item item-avatar" href="#">
-    <img src="venkman.jpg">
-    <h2>Venkman</h2>
-    <p>Back off, man. I'm a scientist.</p>
-  </a>
-   <a class="item item-avatar" href="#">
-    <img src="venkman.jpg">
-    <h2>Venkman</h2>
-    <p>Back off, man. I'm a scientist.</p>
-  </a>
-   <a class="item item-avatar" href="#">
-    <img src="venkman.jpg">
-    <h2>Venkman</h2>
-    <p>Back off, man. I'm a scientist.</p>
-  </a>
-   <a class="item item-avatar" href="#">
-    <img src="venkman.jpg">
-    <h2>Venkman</h2>
-    <p>Back off, man. I'm a scientist.</p>
-  </a>
-
 
 </div>

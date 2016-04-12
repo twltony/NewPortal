@@ -40,9 +40,23 @@ angular.module('ctrl-dash', [])
     $scope.nameText = "";
 }])
 
-.controller('DashItemCtrl',['$scope','$stateParams',function($scope,$stateParams){
+.controller('DashItemCtrl',['$scope','$stateParams','Bills',function($scope,$stateParams,Bills){
     //console.log($stateParams.pageId);
     //console.log($scope.nameText);
     $scope.nameText = $stateParams.pageId;
+    $scope.billItems = Bills.all();
+    $scope.remove = function (billItem) {
+      Bills.remove(billItem);
+    };
 
+    $scope.billItem = Bills.get($stateParams.billItemId);
   }])
+
+  .controller('DashItemDetialsCtrl',['$scope','$stateParams','Bills',function($scope,$stateParams,Bills){
+    //console.log($stateParams.pageId);
+    //console.log($scope.nameText);
+    //$scope.nameText = $stateParams.pageId;
+    $scope.billItem = Bills.get($stateParams.billItemId);
+  }])
+
+

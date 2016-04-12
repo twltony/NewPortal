@@ -143,6 +143,11 @@ angular.module('PortalApp', ['ionic', 'app.controllers', 'app.services'])
                 templateUrl: 'templates/Tabs/tab-dash-items.html',
                 controller: 'DashItemCtrl'
             })
+            .state('tab.billDetials',{
+                url: '/dash-items-detials/:billItemId',
+                templateUrl: 'templates/Tabs/tab-dash-items-detials.html',
+                controller:'DashItemDetialsCtrl'
+            })
             //.state('tab.dash.todo', {
             //  url: '/todo',
             //  nativeTransitionsIOS: {

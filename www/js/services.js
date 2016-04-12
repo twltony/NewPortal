@@ -1,52 +1,52 @@
 angular.module('app.services', [])
 
-.factory('Profiles', function() {
-  // Might use a resource here that returns a JSON array
+.factory('Bills', function() {
 
-  // Some fake testing data
-  var profiles = [{
+    //模拟已经从服务器获取到数据。正式需要使用$http服务与后台通讯获取数据
+  var billItems = [{
     id: 0,
-    name: 'Anoop Kumar',
-    deseg: 'Team Lead',
-    face: 'img/150x165/anoop-kumar.png'
-  }, {
+    title: '张0提交单据-审批通过 FYBXD0000000011',
+    system: '费用报销单',
+    date: '2016-01-01'
+  },{
     id: 1,
-    name: 'Vijay Kumar',
-    deseg: 'Project Manager',
-    face: 'img/150x165/vijay-kumar.png'
-  }, {
+    title: '张1提交单据-审批通过 FYBXD0000000011',
+    system: '费用报销单',
+    date: '2016-01-01'
+  },{
     id: 2,
-	name: 'Durgesh Soni',
-	deseg: 'Team Lead',
-    face: 'img/150x165/durgesh-soni.png'
-  }, {
+    title: '张2提交单据-审批通过 FYBXD0000000011',
+    system: '费用报销单',
+    date: '2016-01-01'
+  },{
     id: 3,
-	 name: 'Manish Mittal',
-    deseg: 'Project Manager',
-    face: 'img/150x165/manish-mittal.png'
-  }, {
+    title: '张3提交单据-审批通过 FYBXD0000000011',
+    system: '费用报销单',
+    date: '2016-01-01'
+  },{
     id: 4,
-	name: 'Vinay Kumar',
-	deseg: 'UI Designer',
-    face: 'img/150x165/vinay-kumar.png'
-  }, {
+    title: '张4提交单据-审批通过 FYBXD0000000011',
+    system: '费用报销单',
+    date: '2016-01-01'
+  },{
     id: 5,
-	name: 'Ankit Gera',
-	deseg: 'System Administrator',
-    face: 'img/150x165/ankit-gera.png'
-  }];
+    title: '张5提交单据-审批通过 FYBXD0000000011',
+    system: '费用报销单',
+    date: '2016-01-01'
+  }
+  ];
 
   return {
     all: function() {
-      return profiles;
+      return billItems;
     },
     remove: function(id) {
-      profiles.splice(profiles.indexOf(id), 1);
+      billItems.splice(billItems.indexOf(id), 1);
     },
-    get: function(profileId) {
-      for (var i = 0; i < profiles.length; i++) {
-        if (profiles[i].id === parseInt(profileId)) {
-          return profiles[i];
+    get: function(billItemsId) {
+      for (var i = 0; i < billItems.length; i++) {
+        if (billItems[i].id === parseInt(billItemsId)) {
+          return billItems[i];
         }
       }
       return null;

@@ -4,9 +4,9 @@
  */
 
 angular.module('ctrl-mainmenu',[])
-    .controller('MainMenuCtrl', ['$scope','$location', function ($scope,$location) {
+    .controller('MainMenuCtrl', ['$scope','$state', function ($scope,$state) {
         $scope.erpBtnClick = function(){
-          $location.path('/tab/dash');
-          console.log("erp");
+          $state.go('tab.dash.items',{pageId:'1'});
+
         }
     }])
